@@ -1,0 +1,78 @@
+.services {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 400px 400px;
+        grid-template-areas: "lefttop    centertop    right" "leftbottom centerbottom right";
+    }
+    &__grid1 {
+        grid-area: lefttop;
+        background: #dbdbdb;
+    }
+    &__grid2 {
+        grid-area: centertop;
+    }
+    &__grid3 {
+        grid-area: leftbottom;
+    }
+    &__grid4 {
+        grid-area: centerbottom;
+        background: #dbdbdb;
+    }
+    &__grid5 {
+        grid-area: right;
+        background: url(../img/bg-services.png);
+    }
+    &__block {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+//        transform-style: preserve-3d;
+//        transition: all .4s ease-in;
+        &:hover {
+            .services__front {
+                transform: rotate(-180deg);
+            }
+            .services__back {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__cell {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: all .4s ease-in;
+        
+    }
+    &__front {
+        padding-top: 96px;
+        z-index: 1;
+        backface-visibility: hidden;
+    }
+    &__back {
+        padding-top: 50px;
+        transform: rotateY(-180deg) translateZ(0);
+        backface-visibility: hidden;
+    }
+    &__title {
+        font-family: PTSans;
+        color: #665f60;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    &__text {
+        font-family: PTSans;
+        color: #665f60;
+        font-size: 18px;
+        font-style: italic;
+        width: 200px;
+        margin: 0 auto;
+    }
+}
