@@ -5959,10 +5959,8 @@ button.close {
     display: none !important; } }
 
 .cd-navbar {
-  position: fixed;
+  position: static;
   left: 50%; }
-  .cd-navbar__container {
-    margin-left: -50%; }
   .cd-navbar__brand:hover {
     fill: #9f9acf;
     -webkit-transition: all 0.5s ease-in-out;
@@ -5986,6 +5984,8 @@ button.close {
       color: #9f9acf; }
 
 header {
+  margin: -124px auto 0;
+  width: 100%;
   max-width: 1600px;
   height: 100vh;
   background: url(../img/bg.png);
@@ -6015,3 +6015,62 @@ header {
       font-family: PTSans;
       font-size: 30px;
       font-style: italic; }
+
+.about__main {
+  margin-top: 120px;
+  margin-bottom: 120px; }
+
+.about__left {
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  max-height: 555px; }
+
+.about__bg {
+  width: 100%;
+  height: auto; }
+
+.about__header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding-top: 75px;
+  text-align: center; }
+
+.about__img {
+  margin: 0 auto;
+  display: block; }
+
+.about__title {
+  font-family: Arial;
+  margin-top: 45px;
+  color: #fefbfc;
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.about__right {
+  padding-top: 75px; }
+
+.about__text {
+  text-align: left; }
+
+.about__p {
+  font-family: PTSans;
+  color: #665f60;
+  font-size: 20px;
+  font-weight: 400; }
+
+.about__button {
+  text-align: center;
+  padding-top: 75px; }
+
+.about__btn {
+  padding: 15px 50px;
+  border-color: #7d7a7c;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  font-family: PTSans;
+  color: #7d7a7c;
+  font-size: 20px;
+  font-style: italic; }

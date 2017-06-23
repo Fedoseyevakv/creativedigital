@@ -1,10 +1,7 @@
 $color: #9f9acf;
 .cd-navbar {
-    position: fixed;
+    position: static;
     left: 50%;
-    &__container {
-        margin-left: -50%;
-    }
     &__brand {
         &:hover {
             fill: $color;
