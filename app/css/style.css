@@ -6423,3 +6423,112 @@ header {
     color: #665f60;
     font-size: 24px;
     font-style: italic; }
+  .team__social {
+    background: #9f9acf;
+    padding: 20px 0; }
+  .team__soc-block {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin: 0 6px; }
+  .team .fa {
+    color: #9f9acf;
+    font-size: 20px;
+    line-height: 32px; }
+
+.contact {
+  overflow: hidden;
+  position: relative;
+  height: 900px; }
+  .contact #map {
+    position: absolute;
+    height: 900px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+  .contact__color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #9f9acf;
+    opacity: 0.6; }
+  .contact__main {
+    position: absolute;
+    width: 100%;
+    padding: 55px 0;
+    text-align: center; }
+  .contact__name {
+    font-family: Arial;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .contact__adress, .contact__tel {
+    position: absolute;
+    right: -255px;
+    width: 350px;
+    height: 91px;
+    font-size: 0; }
+    .contact__adress:hover, .contact__tel:hover {
+      right: 0; }
+  .contact__adress {
+    top: 220px; }
+  .contact__pic {
+    display: inline-block;
+    width: 91px;
+    height: 91px;
+    background: #9f9acf; }
+  .contact__text {
+    display: inline-block;
+    width: 255px;
+    height: 91px;
+    font-size: 18px;
+    background: rgba(235, 235, 235, 0.5); }
+  .contact__tel {
+    top: 311px; }
+
+footer {
+  height: 185px;
+  background: #9f9acf; }
+  footer .cd-footer {
+    width: 100%;
+    height: 185px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    footer .cd-footer__text {
+      font-family: Arial;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400; }
+    footer .cd-footer__social {
+      background: #9f9acf;
+      padding: 20px 0; }
+    footer .cd-footer__soc-block {
+      text-align: center;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      margin: 0 6px; }
+    footer .cd-footer .fa {
+      color: #9f9acf;
+      font-size: 20px;
+      line-height: 32px; }

@@ -1,0 +1,68 @@
+.contact {
+    overflow: hidden;
+    position: relative;
+    height: 900px;
+    #map {
+        position: absolute;
+        height: 900px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    &__color {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #9f9acf;
+        opacity: 0.6;
+    }
+    &__main {
+        position: absolute;
+        width: 100%;
+        padding: 55px 0;
+        text-align: center;
+    }
+    &__name {
+        font-family: Arial;
+        color: #fff;
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__adress, &__tel {
+        position:absolute;
+        right: -255px;
+        width: 350px;
+        height: 91px;
+        font-size: 0;
+        
+        &:hover {
+            right: 0;
+        }
+    }
+    &__adress {
+        top: 220px;
+    }
+    &__pic {
+        display: inline-block;
+        width: 91px;
+        height: 91px;
+        background: #9f9acf;
+    }
+    &__text {
+        display: inline-block;
+        width: 255px;
+        height: 91px;
+        font-size: 18px;
+        background: rgba(235, 235, 235, 0.5);
+    }
+    &__tel {
+        top: 311px;
+    }
+    &__form {
+        
+    }
+}

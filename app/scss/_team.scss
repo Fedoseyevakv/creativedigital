@@ -39,4 +39,21 @@
         font-size: 24px;
         font-style: italic;
     }
+    &__social {
+        background: #9f9acf;
+        padding: 20px 0;
+    }
+    &__soc-block {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 0 6px;
+    }
+    .fa {
+        color:#9f9acf;
+        font-size: 20px;
+        line-height: 32px;
+    }
 }
