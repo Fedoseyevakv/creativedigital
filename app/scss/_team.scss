@@ -1,0 +1,42 @@
+.team {
+    background: #ebebeb;
+    padding-bottom: 100px;
+    &__title {
+        text-align: center;
+        padding-top: 50px;
+    }
+    &__name {
+        font-family: Arial;
+        color: #665f60;
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__block {
+        text-align: center;
+    }
+    &__foto {
+        display: inline-block!important;
+        border: 10px solid #ebebeb;
+        border-radius: 50%;
+        margin-bottom: -125px;
+    }
+    &__fon {
+        background: #fff;
+        padding-top: 160px;
+        padding-bottom: 50px;
+    }
+    &__nick {
+        font-family: Arial;
+        color: #9f9acf;
+        font-size: 24px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__desc {
+        font-family: PTSans;
+        color: #665f60;
+        font-size: 24px;
+        font-style: italic;
+    }
+}

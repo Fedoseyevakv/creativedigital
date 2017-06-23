@@ -1,0 +1,37 @@
+.works {
+    background: url(../img/bg-works.png);
+    height: 1000px;
+    &__main {
+        text-align: center;
+    }
+    &__title {
+        padding-top: 50px;
+    }
+    &__name {
+        font-family: Arial;
+        color: #fefcfe;
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__slide {
+        width: 730px;
+        height: 550px;
+        overflow-y: scroll;
+    }
+    &__fancy-slide {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+    &__btn {
+        font-family: PTSans;
+        color: #ffffff;
+        font-size: 20px;
+        font-style: italic;
+        border-color: #fff;
+        border-radius: 0;
+        background: none;
+        padding: 15px 45px;
+    }
+}

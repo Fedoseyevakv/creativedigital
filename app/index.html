@@ -168,7 +168,7 @@
                         <div class="services__block">
                             <div class="services__front services__cell">
                                 <img src="img/Icon5-services.png" alt="" class="services__img">
-                                <h3 class="services__title">OUR SERVICES</h3>
+                                <h3 class="services__title--">OUR SERVICES</h3>
                                 <p class="services__text">“Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.” - Borat -</p>
                             </div>
                             <div class="services__back services__cell">
@@ -184,60 +184,84 @@
     <section class="works">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-offset-lg-2">
-                    <div class="works__title">
-                        <img src="" alt="" class="works__img">
-                        <h2 class="works__name">recent works</h2>
-                    </div>
-                    <div class="works__slider">
-                        <div class="works__slide1"></div>
-                        <div class="works__slide2"></div>
-                        <div class="works__slide3"></div>
-                        <div class="works__slide4"></div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="works__main">
+                        <div class="works__title">
+                            <img src="img/icon-works.png" alt="" class="works__img">
+                            <h2 class="works__name">recent works</h2>
+                        </div>
+                        <div class="works__slider">
+                            <div class="works__slide1 works__slide">
+                                <a href="" data-fancybox="sites"><img src="img/site1.jpg" alt="" class="works__fancy-slide"></a>
+                            </div>
+                            <div class="works__slide2 works__slide">
+                                <a href="" data-fancybox="sites"><img src="img/site2.jpg" alt="" class="works__fancy-slide"></a>
+                            </div>
+                            <div class="works__slide3 works__slide">
+                                <a href="" data-fancybox="sites"><img src="img/site3.jpg" alt="" class="works__fancy-slide"></a>
+                            </div>
+                            <div class="works__slide4 works__slide">
+                                <a href="" data-fancybox="sites"><img src="img/site4.jpg" alt="" class="works__fancy-slide"></a>
+                            </div>
+                        </div>
+                        <button class="btn btn-default works__btn" type="submit" id="fancy">View galery</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="our-team">
+    <section class="team">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="our-team__title">
-                        <img src="" alt="" class="our-team__img">
-                        <h2 class="our-team__name">meet our team</h2>
+                    <div class="team__title">
+                        <img src="img/icon-team.png" alt="" class="team__img">
+                        <h2 class="team__name">meet our team</h2>
                     </div>
                 </div>
             </div>
+            
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="our-team__block"><img src="" alt="" class="our-team__foto">
-                        <h3 class="our-team__name">Miguel Obrien</h3>
-                        <p class="our-team__desc">CEO & Founder</p>
-                        <div class="our-team__social"></div>
+                <div class="team__slider">
+                    <div class="col-lg-4">
+                        <div class="team__block">
+                            <img src="img/foto1-team.png" alt="" class="team__foto">
+                            <div class="team__fon">
+                                <h3 class="team__nick">Miguel Obrien</h3>
+                                <p class="team__desc">CEO & Founder</p>
+                            </div>
+                            <div class="team__social"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="our-team__block"><img src="" alt="" class="our-team__foto">
-                        <h3 class="our-team__name">Jackie Carroll</h3>
-                        <p class="our-team__desc">Art Director</p>
-                        <div class="our-team__social"></div>
+                    <div class="col-lg-4">
+                        <div class="team__block">
+                            <img src="img/foto2-team.png" alt="" class="team__foto">
+                            <div class="team__fon">
+                                <h3 class="team__nick">Jackie Carroll</h3>
+                                <p class="team__desc">Art Director</p>
+                            </div>
+                            <div class="team__social"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="our-team__block"><img src="" alt="" class="our-team__foto">
-                        <h3 class="our-team__name">Ida Morrison</h3>
-                        <p class="our-team__desc">Designer</p>
-                        <div class="our-team__social">
-                            <div class="our-team__soc-block our-team__soc-block-1"></div>
-                            <div class="our-team__soc-block our-team__soc-block-2"></div>
-                            <div class="our-team__soc-block our-team__soc-block-3"></div>
-                            <div class="our-team__soc-block our-team__soc-block-4"></div>
-                            <div class="our-team__soc-block our-team__soc-block-5"></div>
+                    <div class="col-lg-4">
+                        <div class="team__block">
+                            <img src="img/foto3-team.png" alt="" class="team__foto">
+                            <div class="team__fon">
+                                <h3 class="team__nick">Ida Morrison</h3>
+                                <p class="team__desc">Designer</p>
+                            </div>
+                            <div class="team__social">
+                                <div class="team__soc-block team__soc-block-1"></div>
+                                <div class="team__soc-block team__soc-block-2"></div>
+                                <div class="team__soc-block team__soc-block-3"></div>
+                                <div class="team__soc-block team__soc-block-4"></div>
+                                <div class="team__soc-block team__soc-block-5"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -284,6 +308,9 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="js/libs.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 
 
 </body>
