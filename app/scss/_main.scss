@@ -1,0 +1,28 @@
+$color: #9f9acf;
+.cd-navbar {
+    position: fixed;
+    left: 50%;
+    &__container {
+        margin-left: -50%;
+    }
+    &__brand {
+        &:hover {
+            fill: $color;
+            transition: all 0.5s ease-in-out;
+            transform-origin: 50% 50%;
+            transform: rotate(-10deg);
+        }
+    }
+    &__link {
+        font-family: Arial;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 72px!important;
+        text-transform: uppercase;
+        &:hover {
+            background: none!important;
+            color: $color;
+        }
+    }
+}

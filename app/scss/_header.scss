@@ -1,0 +1,25 @@
+header {
+    max-width: 1600px;
+    height: 100vh;
+    background: url(../img/bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cd-header {
+        text-align: center;
+        color: #fefdfd;
+        &__title {
+            font-family: Arial;
+            font-size: 65px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &__text {
+            max-width: 680px;
+            margin: 0 auto;
+            font-family: PTSans;
+            font-size: 30px;
+            font-style: italic;
+        }
+    }
+}
