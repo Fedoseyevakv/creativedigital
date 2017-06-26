@@ -51,6 +51,16 @@ $second-font: 'PT Sans';
     }
 }
 
+.color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color;
+    opacity: 0.5;
+}
+
 .cd-navbar {
     &__brand {
         &:hover {
@@ -109,4 +119,18 @@ $second-font: 'PT Sans';
     &:hover {
         opacity: 1;
     }
+}
+
+/*---------- Placeholder ----------*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
 }

@@ -17,7 +17,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: #9f9acf;
+        background: $color;
     }
     &__main {
         position: absolute;
@@ -32,13 +32,13 @@
         font-weight: 600;
         text-transform: uppercase;
     }
-    &__adress, &__tel {
-        position:absolute;
+    &__adress,
+    &__tel {
+        position: absolute;
         right: -255px;
         width: 350px;
         height: 91px;
         font-size: 0;
-        
         &:hover {
             right: 0;
         }
@@ -62,7 +62,31 @@
     &__tel {
         top: 311px;
     }
-    &__form {
-        
+    &__form {}
+    &__input {
+        border-radius: 4px;
+        background-color: rgba(235, 235, 235, 0.5);
+        width: 414px;
+        height: 56px;
+        border: none;
+        padding: 0 20px;
+        font-family: $second-font;
+        color: $color;
+        font-size: 18px;
+        font-style: italic;
+        &:focus {
+            background: rgba(235, 235, 235, 0.8);
+        }
+    }
+    &__btn {
+        border-radius: 4px;
+        background-color: $color;
+        width: 293px;
+        height: 70px;
+        font-family: $main-font;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
