@@ -7,7 +7,6 @@
     }
     &__grid1 {
         grid-area: lefttop;
-        background: #dbdbdb;
     }
     &__grid2 {
         grid-area: centertop;
@@ -17,11 +16,9 @@
     }
     &__grid4 {
         grid-area: centerbottom;
-        background: #dbdbdb;
     }
     &__grid5 {
         grid-area: right;
-        background: url(../img/bg-services.png);
     }
     &__block {
         position: relative;
@@ -29,14 +26,17 @@
         bottom: 0;
         left: 0;
         right: 0;
-//        transform-style: preserve-3d;
+        perspective: 800px;
+        height: 100%;
 //        transition: all .4s ease-in;
         &:hover {
             .services__front {
-                transform: rotate(-180deg);
+                transform: rotateY(-180deg);
+                z-index: 3;
             }
             .services__back {
-                transform: rotate(180deg);
+                transform: rotateY(0deg);
+                z-index: 4;
             }
         }
     }
@@ -48,27 +48,44 @@
         right: 0;
         text-align: center;
         transform-style: preserve-3d;
-        transition: all .4s ease-in;
-        
+        transition: .4s ease-in;
+        transition-property: transform;
+        height: 400px;
     }
     &__front {
         padding-top: 96px;
         z-index: 1;
         backface-visibility: hidden;
+        background: #fff;
+    }
+    &__front--c {
+        background: #dbdbdb;
+    }
+    &__front--p {
+        height: 800px;
+        background: url(../img/bg-services.png);
     }
     &__back {
         padding-top: 50px;
         transform: rotateY(-180deg) translateZ(0);
         backface-visibility: hidden;
+        background: #fff;
+    }
+    &__back--c {
+        background: #dbdbdb;
+    }
+    &__back--p {
+        height: 800px;
+        background: rgba(159, 154, 207, 0.5);
     }
     &__title {
-        font-family: PTSans;
+        font-family: $second-font;
         color: #665f60;
         font-size: 25px;
         font-weight: 700;
     }
     &__text {
-        font-family: PTSans;
+        font-family: $second-font;
         color: #665f60;
         font-size: 18px;
         font-style: italic;

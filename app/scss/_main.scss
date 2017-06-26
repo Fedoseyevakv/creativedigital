@@ -1,7 +1,57 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url(../fonts/ProximaNova/ProximaNova-Semibold/ProximaNova-Semibold.ttf) format('ttf'), url(../fonts/ProximaNova/ProximaNova-Semibold/ProximaNova-Semibold.woff) format('woff');
+    font-weight: semibold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url(../fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.ttf) format('ttf'), url(../fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.woff) format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url(../fonts/PTSans/PTC55F.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url(../fonts/PTSans/PTC75F.ttf) format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url(../fonts/PTSans/PTN57F.ttf) format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 $color: #9f9acf;
+$main-font: 'ProximaNova';
+$second-font: 'PT Sans';
+#nav {
+    &.default {
+        position: relative;
+    }
+    &.fixed {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background: $color;
+    }
+}
+
 .cd-navbar {
-    position: static;
-    left: 50%;
     &__brand {
         &:hover {
             fill: $color;
@@ -11,15 +61,52 @@ $color: #9f9acf;
         }
     }
     &__link {
-        font-family: Arial;
+        font-family: $main-font;
         color: #fff;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 24px;
+        font-weight: semibold;
         line-height: 72px!important;
         text-transform: uppercase;
         &:hover {
             background: none!important;
             color: $color;
         }
+    }
+}
+
+.header {
+    text-align: center;
+    &__img {
+        margin: 0 auto;
+        display: block;
+    }
+    &__title {
+        font-family: $main-font;
+        margin-top: 45px;
+        color: #fefbfc;
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.arrow {
+    position: fixed;
+    right: 130px;
+    bottom: 230px;
+    background: $color;
+    ;
+    width: 84px;
+    height: 84px;
+    opacity: 0.5;
+    text-align: center;
+    display: none;
+    &__glyph {
+        font-size: 36px;
+        color: #fff;
+        line-height: 84px;
+    }
+    &:hover {
+        opacity: 1;
     }
 }

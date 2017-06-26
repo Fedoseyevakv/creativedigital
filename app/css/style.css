@@ -6160,61 +6160,120 @@ button.close {
       color: black;
       opacity: 0.75; }
 
-.cd-navbar {
-  position: static;
-  left: 50%; }
-  .cd-navbar__brand:hover {
-    fill: #9f9acf;
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg); }
-  .cd-navbar__link {
-    font-family: Arial;
-    color: #fff;
-    font-size: 18px;
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/ProximaNova/ProximaNova-Semibold/ProximaNova-Semibold.ttf) format("ttf"), url(../fonts/ProximaNova/ProximaNova-Semibold/ProximaNova-Semibold.woff) format("woff");
+  font-weight: semibold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.ttf) format("ttf"), url(../fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans/PTC55F.ttf) format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans/PTC75F.ttf) format("ttf");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url(../fonts/PTSans/PTN57F.ttf) format("ttf");
+  font-weight: bold;
+  font-style: normal; }
+
+#nav.default {
+  position: relative; }
+
+#nav.fixed {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #9f9acf; }
+
+.cd-navbar__brand:hover {
+  fill: #9f9acf;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg); }
+
+.cd-navbar__link {
+  font-family: "ProximaNova";
+  color: #fff;
+  font-size: 24px;
+  font-weight: semibold;
+  line-height: 72px !important;
+  text-transform: uppercase; }
+  .cd-navbar__link:hover {
+    background: none !important;
+    color: #9f9acf; }
+
+.header {
+  text-align: center; }
+  .header__img {
+    margin: 0 auto;
+    display: block; }
+  .header__title {
+    font-family: "ProximaNova";
+    margin-top: 45px;
+    color: #fefbfc;
+    font-size: 36px;
     font-weight: 500;
-    line-height: 72px !important;
     text-transform: uppercase; }
-    .cd-navbar__link:hover {
-      background: none !important;
-      color: #9f9acf; }
+
+.arrow {
+  position: fixed;
+  right: 130px;
+  bottom: 230px;
+  background: #9f9acf;
+  width: 84px;
+  height: 84px;
+  opacity: 0.5;
+  text-align: center;
+  display: none; }
+  .arrow__glyph {
+    font-size: 36px;
+    color: #fff;
+    line-height: 84px; }
+  .arrow:hover {
+    opacity: 1; }
 
 header {
-  margin: -124px auto 0;
   width: 100%;
-  max-width: 1600px;
   height: 100vh;
-  background: url(../img/bg.png);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  background: url(../img/bg.png) top center no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%; }
   header .cd-header {
+    margin-top: 280px;
     text-align: center;
     color: #fefdfd; }
     header .cd-header__title {
-      font-family: Arial;
+      font-family: "ProximaNova";
       font-size: 65px;
-      font-weight: 700;
+      font-weight: bold;
       text-transform: uppercase; }
     header .cd-header__text {
       max-width: 680px;
       margin: 0 auto;
-      font-family: PTSans;
+      font-family: "PT Sans";
       font-size: 30px;
       font-style: italic; }
 
@@ -6236,20 +6295,7 @@ header {
   position: absolute;
   width: 100%;
   top: 0;
-  padding-top: 75px;
-  text-align: center; }
-
-.about__img {
-  margin: 0 auto;
-  display: block; }
-
-.about__title {
-  font-family: Arial;
-  margin-top: 45px;
-  color: #fefbfc;
-  font-size: 35px;
-  font-weight: 500;
-  text-transform: uppercase; }
+  padding-top: 75px; }
 
 .about__right {
   padding-top: 75px; }
@@ -6258,10 +6304,10 @@ header {
   text-align: left; }
 
 .about__p {
-  font-family: PTSans;
+  font-family: "PT Sans";
   color: #665f60;
   font-size: 20px;
-  font-weight: 400; }
+  font-weight: normal; }
 
 .about__button {
   text-align: center;
@@ -6272,10 +6318,13 @@ header {
   border-color: #7d7a7c;
   -webkit-border-radius: 0;
           border-radius: 0;
-  font-family: PTSans;
+  font-family: "PT Sans";
   color: #7d7a7c;
   font-size: 20px;
   font-style: italic; }
+  .about__btn:hover, .about__btn:focus, .about__btn:active {
+    background: none !important;
+    color: #7d7a7c; }
 
 .services__grid {
   display: grid;
@@ -6284,8 +6333,7 @@ header {
   grid-template-areas: "lefttop    centertop    right" "leftbottom centerbottom right"; }
 
 .services__grid1 {
-  grid-area: lefttop;
-  background: #dbdbdb; }
+  grid-area: lefttop; }
 
 .services__grid2 {
   grid-area: centertop; }
@@ -6294,27 +6342,28 @@ header {
   grid-area: leftbottom; }
 
 .services__grid4 {
-  grid-area: centerbottom;
-  background: #dbdbdb; }
+  grid-area: centerbottom; }
 
 .services__grid5 {
-  grid-area: right;
-  background: url(../img/bg-services.png); }
+  grid-area: right; }
 
 .services__block {
   position: relative;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  height: 100%; }
   .services__block:hover .services__front {
-    -webkit-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    z-index: 3; }
   .services__block:hover .services__back {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    z-index: 4; }
 
 .services__cell {
   position: absolute;
@@ -6325,31 +6374,53 @@ header {
   text-align: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: all .4s ease-in;
-  -o-transition: all .4s ease-in;
-  transition: all .4s ease-in; }
+  -webkit-transition: .4s ease-in;
+  -o-transition: .4s ease-in;
+  transition: .4s ease-in;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  height: 400px; }
 
 .services__front {
   padding-top: 96px;
   z-index: 1;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+          backface-visibility: hidden;
+  background: #fff; }
+
+.services__front--c {
+  background: #dbdbdb; }
+
+.services__front--p {
+  height: 800px;
+  background: url(../img/bg-services.png); }
 
 .services__back {
   padding-top: 50px;
   -webkit-transform: rotateY(-180deg) translateZ(0);
           transform: rotateY(-180deg) translateZ(0);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+          backface-visibility: hidden;
+  background: #fff; }
+
+.services__back--c {
+  background: #dbdbdb; }
+
+.services__back--p {
+  height: 800px;
+  background: rgba(159, 154, 207, 0.5); }
 
 .services__title {
-  font-family: PTSans;
+  font-family: "PT Sans";
   color: #665f60;
   font-size: 25px;
   font-weight: 700; }
 
 .services__text {
-  font-family: PTSans;
+  font-family: "PT Sans";
   color: #665f60;
   font-size: 18px;
   font-style: italic;
@@ -6449,15 +6520,15 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 0; }
+    z-index: 0;
+    opacity: 0.5; }
   .contact__color {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #9f9acf;
-    opacity: 0.6; }
+    background: #9f9acf; }
   .contact__main {
     position: absolute;
     width: 100%;

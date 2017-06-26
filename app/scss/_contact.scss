@@ -9,6 +9,7 @@
         top: 0;
         left: 0;
         z-index: 0;
+        opacity: 0.5;
     }
     &__color {
         position: absolute;
@@ -17,7 +18,6 @@
         left: 0;
         right: 0;
         background: #9f9acf;
-        opacity: 0.6;
     }
     &__main {
         position: absolute;

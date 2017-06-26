@@ -1,25 +1,22 @@
 header {
-    margin: -124px auto 0;
     width: 100%;
-    max-width: 1600px;
     height: 100vh;
-    background: url(../img/bg.png);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url(../img/bg.png) top center no-repeat;
+    background-size: 100%;
     .cd-header {
+        margin-top: 280px;
         text-align: center;
         color: #fefdfd;
         &__title {
-            font-family: Arial;
+            font-family: $main-font;
             font-size: 65px;
-            font-weight: 700;
+            font-weight: bold;
             text-transform: uppercase;
         }
         &__text {
             max-width: 680px;
             margin: 0 auto;
-            font-family: PTSans;
+            font-family: $second-font;
             font-size: 30px;
             font-style: italic;
         }
