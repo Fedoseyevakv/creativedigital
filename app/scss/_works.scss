@@ -1,22 +1,18 @@
 .works {
-    background: url(../img/bg-works.png);
+    background: $color url(../img/bg-works.png) top center no-repeat;
+    background-size: 100%;
     height: 1000px;
-    &__main {
-        text-align: center;
-    }
-    &__title {
+    position: relative;
+    text-align: center;
+    &__header {
         padding-top: 50px;
     }
-    &__name {
-        font-family: Arial;
-        color: #fefcfe;
-        font-size: 36px;
-        font-weight: 500;
-        text-transform: uppercase;
+    &__slider {
+        width: 100%;
     }
     &__slide {
-        width: 730px;
-        height: 550px;
+        width: 100%;
+        height: 600px;
         overflow-y: scroll;
     }
     &__fancy-slide {
@@ -25,13 +21,78 @@
         overflow: scroll;
     }
     &__btn {
-        font-family: PTSans;
-        color: #ffffff;
+        font-family: $main-font;
+        color: #fff;
         font-size: 20px;
         font-style: italic;
         border-color: #fff;
         border-radius: 0;
         background: none;
         padding: 15px 45px;
+        margin-top: 45px;
+        &:hover {
+            color: $color;
+            background: #fff;
+            border-color: $color;
+        }
+    }
+    &__arrow-left,
+    &__arrow-right {
+        position: absolute;
+        top: 50%;
+        font-size: 36px;
+        color: #665f60;
+        cursor: pointer;
+        z-index: 20;
+    }
+    &__arrow-left {
+        @media (max-width: $screen-xs-max) {
+            top: 10%;
+            left: 25px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            left: 5%;
+        }
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            left: 5%;
+        }
+        @media (min-width: $screen-lg-min) {
+            left: 10%;
+        }
+    }
+    &__arrow-right {
+        @media (max-width: $screen-xs-max) {
+            top: 10%;
+            right: 25px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            right: 5%;
+        }
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+            right: 5%;
+        }
+        @media (min-width: $screen-lg-min) {
+            right: 10%;
+        }
+    }
+    .slick-dots li button:before {
+        width: 12px;
+        height: 12px;
+        font-size: 6px;
+        line-height: 10px;
+        text-align: center;
+        border: 2px solid #ebebeb;
+        border-radius: 50%;
+        background: none;
+        content: '';
+        opacity: 1;
+    }
+    .slick-dots li {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+    }
+    .slick-dots li.slick-active button:before {
+        background: #fff;
     }
 }

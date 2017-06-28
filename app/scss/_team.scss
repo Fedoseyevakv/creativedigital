@@ -9,6 +9,7 @@
         font-size: 36px;
         color: #665f60;
         cursor: pointer;
+        z-index: 10;
     }
     &__arrow-left {
         @media (max-width: $screen-xs-max) {

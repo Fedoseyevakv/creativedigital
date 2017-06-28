@@ -1,24 +1,36 @@
 .services {
     &__grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: minmax(200px, 400px) minmax(200px, 400px);
-        grid-template-areas: "lefttop    centertop    right" "leftbottom centerbottom right";
+        @media (max-width: $screen-xs-max) {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 420px 420px 420px 420px 700px;
+            grid-template-areas: "left one right" "left two right" "left four right" "left three right" "left five right";
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 490px 490px 490px;
+            grid-template-areas: "one five" "three five" "four two";
+        }
+        @media (min-width: $screen-lg-min) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 400px 400px;
+            grid-template-areas: "one two five" "three four five";
+        }
     }
     &__grid1 {
-        grid-area: lefttop;
+        grid-area: one;
     }
     &__grid2 {
-        grid-area: centertop;
+        grid-area: two;
     }
     &__grid3 {
-        grid-area: leftbottom;
+        grid-area: three;
     }
     &__grid4 {
-        grid-area: centerbottom;
+        grid-area: four;
     }
     &__grid5 {
-        grid-area: right;
+        grid-area: five;
     }
     &__block {
         position: relative;
@@ -28,7 +40,6 @@
         right: 0;
         perspective: 800px;
         height: 100%;
-//        transition: all .4s ease-in;
         &:hover {
             .services__front {
                 transform: rotateY(-180deg);
@@ -50,7 +61,16 @@
         transform-style: preserve-3d;
         transition: .4s ease-in;
         transition-property: transform;
-        height: 400px;
+        @media (max-width: $screen-xs-min) {
+            height: 420px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 490px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 400px;
+        }
+        
     }
     &__front {
         padding-top: 96px;
@@ -62,8 +82,16 @@
         background: #dbdbdb;
     }
     &__front--p {
-        height: 800px;
-        background: url(../img/bg-services.png);
+        background: $color url(../img/bg-services.png) center center no-repeat;
+        @media (max-width: $screen-xs-min) {
+            height: 700px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 980px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 800px;
+        }
     }
     &__back {
         padding-top: 50px;
@@ -75,21 +103,38 @@
         background: #dbdbdb;
     }
     &__back--p {
-        height: 800px;
-        background: rgba(159, 154, 207, 0.5);
+        background: $color-opacity;
+        @media (max-width: $screen-xs-min) {
+            height: 700px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 980px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 800px;
+        }
     }
     &__title {
-        font-family: $second-font;
+        font-family: $main-font;
         color: #665f60;
         font-size: 25px;
         font-weight: 700;
+        &--service {
+            color: #fff;
+            font-size: 36px;
+        }
     }
     &__text {
         font-family: $second-font;
         color: #665f60;
         font-size: 18px;
         font-style: italic;
-        width: 200px;
+        width: 55%;
         margin: 0 auto;
+        &--service {
+            color: #fff;
+            margin-top: 110px;
+            width: 80%;
+        }
     }
 }

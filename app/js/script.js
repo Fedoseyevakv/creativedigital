@@ -5,6 +5,8 @@ $(document).ready(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
+        prevArrow: $('.works__arrow-left'),
+        nextArrow: $('.works__arrow-right'),
     });
 
     $('.team__slider').slick({
