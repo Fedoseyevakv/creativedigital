@@ -8,10 +8,28 @@ $(document).ready(function () {
     });
 
     $('.team__slider').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 300,
+        prevArrow: $('.team__arrow-left'),
+        nextArrow: $('.team__arrow-right'),
         slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                    dots: true
+                }
+    },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+    }
+  ]
     });
 
     $("[data-fancybox]").fancybox({
@@ -98,7 +116,7 @@ $(document).ready(function () {
     });
 
     //Menu active
-    var menu_selector = "#nav";
+    var menu_selector = "#cd-navbar__collapse";
 
     function onScroll() {
         var scroll_top = $(document).scrollTop();
@@ -106,32 +124,32 @@ $(document).ready(function () {
             var hash = $(this).attr("href");
             var target = $(hash);
             if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-                $(menu_selector + " a").parent('.nav__li--active').removeClass("nav__li--active");
-                $(this).parent().addClass("nav__li--active");
+                $(menu_selector + " a").parent('.active').removeClass("active");
+                $(this).parent().addClass("active");
             } else {
-                $(this).parent().removeClass("nav__li--active");
+                $(this).parent().removeClass("active");
             }
         });
     }
 
 
-        $(document).on("scroll", onScroll);
+    $(document).on("scroll", onScroll);
 
-        $("a[href^=#]").click(function (e) {
-            e.preventDefault();
+    $("a[href^=#]").click(function (e) {
+        e.preventDefault();
 
-            $(document).off("scroll");
-            $(menu_selector + " a").parent(".nav__li--active").removeClass("nav__li--active");
-            $(this).parent().addClass("nav__li--active");
-            var hash = $(this).attr("href");
-            var target = $(hash);
+        $(document).off("scroll");
+        $(menu_selector + " a").parent(".active").removeClass("active");
+        $(this).parent().addClass("active");
+        var hash = $(this).attr("href");
+        var target = $(hash);
 
-            $("html, body").animate({
-                scrollTop: target.offset().top
-            }, 500, function () {
-                window.location.hash = hash;
-                $(document).on("scroll", onScroll);
-            });
-
+        $("html, body").animate({
+            scrollTop: target.offset().top
+        }, 500, function () {
+            window.location.hash = hash;
+            $(document).on("scroll", onScroll);
         });
+
+    });
 });

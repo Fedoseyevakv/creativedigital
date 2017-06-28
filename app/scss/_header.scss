@@ -1,12 +1,26 @@
 header {
     width: 100%;
     height: 100vh;
-    background: url(../img/bg.png) top center no-repeat;
-    background-size: 100%;
+    background: url(../img/bg-header.png) top center no-repeat;
+    @media (max-width: $screen-md-max) {
+        background-size: auto 100%;
+    }
+    
+    @media (min-width: $screen-lg-min) {
+        background-size: 100% auto;
+    }
     .cd-header {
-        margin-top: 280px;
         text-align: center;
         color: #fefdfd;
+        &__main {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__row {
+            width: 100%;
+        }
         &__title {
             font-family: $main-font;
             font-size: 65px;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="56px" height="59px" viewBox="0 0 56 59">
+<filter filterUnits="objectBoundingBox" x="0.00" y="0.00" width="100.00" height="100.00" id="filter0">
+<feFlood flood-color="rgb(159,154,206)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="SourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<image x="0" y="52" width="33" height="7" opacity="0.10" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAHCAQAAAAsGOzPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAD0SURBVBjTbdG/SsNQAIXx301u2hhT/yDRSVHQ0dUn8K19CRcFwUVQQbFDS43WJrkOVnDw28+B853gl1JlrFCIokwmCDIBvSRJBp1OZ+VLq5UgIKg0jh3Zt2vLxKYNY5loJBosdQadD+8W5mbePHrwZK4PKnsuXTjUrMOlUuE/ektLrdbC1IsbV26jqHbq3IGJwkghyv1PrlIYq23b1UiuxSAqnTlz4lBjx0SttmEkExWi9GdIa2FuburZg3t33sK6f2xfY1ttU6kyUghyUS5Z6Q16Xz59aLVmpl7NfnX+EEW5XCbI15rJwADrT5Je0umtfh75Bvo7U+J23JVqAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTA2LTI4VDE2OjUwOjA2KzAwOjAwCj7CxwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wNi0yOFQxNjo1MDowNiswMDowMHtjensAAAAASUVORK5CYII=" /><path fillRule="evenodd" d="M 52.86 33.06C 50.58 36.76 44.68 40.46 37.8 43.33 27.71 46.59 9.88 52.79 9.88 52.79 9.88 52.79 9.88 23.87 9.88 23.87 9.88 23.87 10.44 14.04 12.29 11.02 18.76 0.48 33.08-3.13 44.28 2.95 55.49 9.04 59.33 22.52 52.86 33.06ZM 32.94 9.34C 26.57 9.34 21.4 14.2 21.4 20.2 21.4 26.19 26.57 31.05 32.94 31.05 39.32 31.05 44.48 26.19 44.48 20.2 44.48 14.2 39.32 9.34 32.94 9.34Z" fill="rgb(58,160,238)" filter="url(#filter0)"/></svg>
