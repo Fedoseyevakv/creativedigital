@@ -1,0 +1,140 @@
+.services {
+    &__grid {
+        display: grid;
+        @media (max-width: $screen-xs-max) {
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 420px 420px 420px 420px 700px;
+            grid-template-areas: "left one right" "left two right" "left four right" "left three right" "left five right";
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 490px 490px 490px;
+            grid-template-areas: "one five" "three five" "four two";
+        }
+        @media (min-width: $screen-lg-min) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 400px 400px;
+            grid-template-areas: "one two five" "three four five";
+        }
+    }
+    &__grid1 {
+        grid-area: one;
+    }
+    &__grid2 {
+        grid-area: two;
+    }
+    &__grid3 {
+        grid-area: three;
+    }
+    &__grid4 {
+        grid-area: four;
+    }
+    &__grid5 {
+        grid-area: five;
+    }
+    &__block {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        perspective: 800px;
+        height: 100%;
+        &:hover {
+            .services__front {
+                transform: rotateY(-180deg);
+                z-index: 3;
+            }
+            .services__back {
+                transform: rotateY(0deg);
+                z-index: 4;
+            }
+        }
+    }
+    &__cell {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        transform-style: preserve-3d;
+        transition: .4s ease-in;
+        transition-property: transform;
+        @media (max-width: $screen-xs-min) {
+            height: 420px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 490px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 400px;
+        }
+        
+    }
+    &__front {
+        padding-top: 96px;
+        z-index: 1;
+        backface-visibility: hidden;
+        background: #fff;
+    }
+    &__front--c {
+        background: #dbdbdb;
+    }
+    &__front--p {
+        background: $color url(../img/bg-services.png) center center no-repeat;
+        @media (max-width: $screen-xs-min) {
+            height: 700px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 980px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 800px;
+        }
+    }
+    &__back {
+        padding-top: 50px;
+        transform: rotateY(-180deg) translateZ(0);
+        backface-visibility: hidden;
+        background: #fff;
+    }
+    &__back--c {
+        background: #dbdbdb;
+    }
+    &__back--p {
+        background: $color-opacity;
+        @media (max-width: $screen-xs-min) {
+            height: 700px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+            height: 980px;
+        }
+        @media (min-width: $screen-lg-min) {
+            height: 800px;
+        }
+    }
+    &__title {
+        font-family: $main-font;
+        color: #665f60;
+        font-size: 25px;
+        font-weight: 700;
+        &--service {
+            color: #fff;
+            font-size: 36px;
+        }
+    }
+    &__text {
+        font-family: $second-font;
+        color: #665f60;
+        font-size: 18px;
+        font-style: italic;
+        width: 55%;
+        margin: 0 auto;
+        &--service {
+            color: #fff;
+            margin-top: 110px;
+            width: 80%;
+        }
+    }
+}

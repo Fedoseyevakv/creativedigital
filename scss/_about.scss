@@ -1,0 +1,65 @@
+    .about {
+        &__grid {
+            width: 100%;
+            display: grid;
+            @media (max-width: $screen-sm-max) {
+                grid-template-columns: 1fr;
+                grid-template-rows: 350px max-content;
+                grid-template-areas: "left" "right";
+                padding: 25px 0;
+            }
+            @media (min-width: $screen-md-min) {
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 555px;
+                grid-template-areas: "left right";
+                padding: 125px 0;
+            }
+        }
+        &__left {
+            grid-area: left;
+            position: relative;
+            background: url(../img/bg-about.png) center center no-repeat;
+            background-size: 100%;
+        }
+        &__header {
+            position: relative;
+            z-index: 10;
+            margin-top: 75px;
+        }
+        &__right {
+            padding: 70px 50px 70px 125px;
+            @media (max-width: $screen-sm-max) {
+                padding: 25px;
+            }
+        }
+        &__text {
+            text-align: left;
+        }
+        &__p {
+            font-family: $main-font;
+            color: #665f60;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        &__button {
+            text-align: center;
+            padding-top: 75px;
+        }
+        &__btn {
+            padding: 15px 50px;
+            border-color: #7d7a7c;
+            border-radius: 0;
+            font-family: $main-font;
+            color: #7d7a7c;
+            font-size: 20px;
+            font-style: italic;
+            background: none!important;
+            &:hover,
+            &:focus,
+            &:active {
+                background: $color!important;
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+    }
